@@ -6,7 +6,7 @@
           :id="icon.split('-')[1]"
           :key="icon"
           icon
-          @click="handleClick($event)"
+          @click="handleClick"
         >
           <v-icon
             :id="icon.split('-')[1]"
