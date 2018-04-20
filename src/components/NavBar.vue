@@ -16,10 +16,10 @@ export default {
   name: 'NavBar',
   methods: {
     handleClick({ target }) {
-      if (target.innerText === 'CONTACT') {
-        this.$router.push('/contact');
-      } else if (target.innerText === 'HOME') {
+      if (target.innerText === 'HOME') {
         this.$router.push('/');
+      } else {
+        this.$router.push('/contact');
       }
     },
   },
