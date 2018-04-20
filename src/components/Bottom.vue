@@ -20,7 +20,6 @@
   </v-footer>
 </template>
 
-
 <script>
 export default {
   name: 'Bottom',

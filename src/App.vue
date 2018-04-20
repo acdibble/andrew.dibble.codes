@@ -2,7 +2,9 @@
   <div id="app">
     <v-app>
       <nav-bar class="header" />
-      <router-view class="content" />
+      <transition name="fade">
+        <router-view class="content" />
+      </transition>
       <bottom class="footer" />
     </v-app>
   </div>
@@ -33,5 +35,18 @@ body {
 
 .footer {
   grid-area: footer;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: .25s;
+}
+
+.fade-enter-active {
+  transition-delay: .25s;
+}
+
+.fade-enter, .fade-leave-active {
+  opacity: 0
 }
 </style>
