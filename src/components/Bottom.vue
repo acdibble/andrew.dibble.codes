@@ -35,7 +35,7 @@ export default {
     ],
   }),
   methods: {
-    handleClick: (e) => {
+    handleClick(e) {
       const { id } = e.target.childNodes[0];
       if (id === 'facebook') {
         window.open('https://www.facebook.com/andrew.dibble');
