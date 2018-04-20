@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <v-app class="application--toolbar application--footer application--footer-fixed">
-      <nav-bar></nav-bar>
-      <router-view/>
-      <bottom></bottom>
+    <v-app>
+      <nav-bar class="header" />
+      <router-view class="content" />
+      <bottom class="footer" />
     </v-app>
   </div>
 </template>
@@ -19,5 +19,19 @@ export default {
 </script>
 
 <style>
+body {
+  min-height: 100vh;
+}
 
+.content {
+  grid-area: content;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
 </style>
