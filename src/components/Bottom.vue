@@ -35,7 +35,18 @@ export default {
     ],
   }),
   methods: {
-    handleClick: e => console.log(e.target.childNodes[0].id), // eslint-disable-line
+    handleClick: (e) => {
+      const { id } = e.target.childNodes[0];
+      if (id === 'facebook') {
+        window.open('https://www.facebook.com/andrew.dibble');
+      } else if (id === 'github') {
+        window.open('https://github.com/acdibble');
+      } else if (id === 'linkedin') {
+        window.open('https://www.linkedin.com/in/andrewdibble/');
+      } else if (id === 'instagram') {
+        window.open('https://www.instagram.com/dynkers/');
+      }
+    },
   },
 };
 </script>
