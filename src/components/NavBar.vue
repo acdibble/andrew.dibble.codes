@@ -5,7 +5,7 @@
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn flat @click="handleClick">Home</v-btn>
-      <v-btn flat>Portfolio</v-btn>
+      <v-btn flat @click="handleClick">Portfolio</v-btn>
       <v-btn flat @click="handleClick">Contact</v-btn>
     </v-toolbar-items>
   </v-toolbar>
