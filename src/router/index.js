@@ -3,6 +3,7 @@ import Router from 'vue-router';
 
 import Main from '@/components/Main';
 import Contact from '@/components/Contact';
+import PageNotFound from '@/components/PageNotFound';
 
 Vue.use(Router);
 
@@ -13,9 +14,13 @@ export default new Router({
       name: 'Main',
       component: Main,
     }, {
-      path: '/contact',
+      path: '/soon',
       name: 'Contact',
       component: Contact,
+    }, {
+      path: '*',
+      name: 'PageNotFound',
+      component: PageNotFound,
     },
   ],
 });
