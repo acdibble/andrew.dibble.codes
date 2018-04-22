@@ -9,7 +9,8 @@
     "start": "node server.js",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "heroku-postbuild": "node build/build.js"
+    "heroku-postbuild": "node build/build.js",
+    "flask": "python app.py"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
