@@ -19,10 +19,9 @@ export default {
       if (target.innerText === 'HOME') {
         this.$router.push('/');
       } else {
-        this.$router.push('/contact');
+        this.$router.push('/soon');
       }
     },
   },
 };
 </script>
-
