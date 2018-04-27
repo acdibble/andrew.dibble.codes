@@ -7,8 +7,7 @@
       <v-btn
         v-for="route in routes"
         :key="route"
-        :id="route"
-        @click="handleClick(route)"
+        @click="navigate(route)"
         flat
       >{{ route }}</v-btn>
     </v-toolbar-items>
@@ -18,8 +17,7 @@
         <v-list-tile
           v-for="route in routes"
           :key="route"
-          :id="route"
-          @click="handleClick(route)"
+          @click="navigate(route)"
         >
           <v-list-tile-title>{{ route }}</v-list-tile-title>
         </v-list-tile>
@@ -37,7 +35,7 @@ export default {
     };
   },
   methods: {
-    handleClick(route) {
+    navigate(route) {
       if (route === 'Home') {
         this.$router.push('/');
       } else {
