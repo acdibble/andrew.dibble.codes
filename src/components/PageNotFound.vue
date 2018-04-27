@@ -12,11 +12,8 @@ export default {
 
 <style scoped>
 h1 {
-  width:800px;
-  height: 200px; line-height: 200px;
-  position: absolute;
-  top: 50%; margin-top:-100px;
-  left: 50%; margin-left:-400px;
-  font-size: 100px;
+  font-size: 10vw;
+  margin-top: 25vh;
+  margin-left: 15vw;
 }
 </style>
