@@ -4,24 +4,44 @@
     <v-toolbar-title>Welcome</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
-      <v-btn flat @click="handleClick">Home</v-btn>
-      <v-btn flat @click="handleClick">Portfolio</v-btn>
-      <v-btn flat @click="handleClick">Contact</v-btn>
+      <v-btn
+        v-for="route in routes"
+        :key="route"
+        :id="route"
+        @click="handleClick(route)"
+        flat
+      >{{ route }}</v-btn>
     </v-toolbar-items>
+    <v-menu class="hidden-md-and-up">
+      <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
+      <v-list>
+        <v-list-tile
+          v-for="route in routes"
+          :key="route"
+          :id="route"
+          @click="handleClick(route)"
+        >
+          <v-list-tile-title>{{ route }}</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
   </v-toolbar>
 </template>
 
 <script>
 export default {
   name: 'NavBar',
+  data() {
+    return {
+      routes: ['Home', 'Portfolio', 'Contact'],
+    };
+  },
   methods: {
-    handleClick({ target: { innerText } }) {
-      if (innerText === 'HOME') {
+    handleClick(route) {
+      if (route === 'Home') {
         this.$router.push('/');
-      } else if (innerText === 'CONTACT') {
-        this.$router.push('/contact');
       } else {
-        this.$router.push('/soon');
+        this.$router.push(`/${route.toLowerCase()}`);
       }
     },
   },
