@@ -15,9 +15,11 @@
 export default {
   name: 'NavBar',
   methods: {
-    handleClick({ target }) {
-      if (target.innerText === 'HOME') {
+    handleClick({ target: { innerText } }) {
+      if (innerText === 'HOME') {
         this.$router.push('/');
+      } else if (innerText === 'CONTACT') {
+        this.$router.push('/contact');
       } else {
         this.$router.push('/soon');
       }
