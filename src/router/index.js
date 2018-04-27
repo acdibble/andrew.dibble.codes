@@ -15,7 +15,7 @@ export default new Router({
       name: 'Main',
       component: Main,
     }, {
-      path: '/soon',
+      path: '/portfolio',
       name: 'Portfolio',
       component: Portfolio,
     }, {
