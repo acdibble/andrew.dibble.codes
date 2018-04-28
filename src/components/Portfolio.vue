@@ -1,25 +1,17 @@
-<template>
-  <div>
-    <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
-        <v-card v-for="app in apps" :key="app.img" class="card">
-          <v-card-media :src="require(`@/assets/img/${app.img}.jpg`)" height="25vw" contain>
-          </v-card-media>
-          <v-card-title primary-title>
-            <div>
-              <h3 class="headline mb-0">{{ app.name }}</h3>
-              <br />
-              <div>{{ app.description }}</div>
-            </div>
-          </v-card-title>
-          <v-card-actions>
-            <v-btn color="primary" :href="app.href" target="_blank" flat>Link</v-btn>
-            <v-btn color="primary" :href="app.source" target="_blank" flat>Source</v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </div>
+<template lang="pug">
+  div
+    v-layout
+      v-flex(xs12 sm6 offset-sm3)
+        v-card(v-for="app in apps" :key="app.img" class="card")
+          v-card-media(:src="require(`@/assets/img/${app.img}.jpg`)" height="25vw" contain)
+          v-card-title(primary-title)
+            div
+              h3(class="headline mb-0") {{ app.name }}
+              br
+              div {{ app.description }}
+          v-card-actions
+            v-btn(color="primary" :href="app.href" target="_blank" flat) Link
+            v-btn(color="primary" :href="app.source" target="_blank" flat) Source
 </template>
 
 <script>
