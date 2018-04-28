@@ -21,7 +21,7 @@
 export default {
   name: 'NavBar',
   data: () => ({
-    routes: ['Home', 'Portfolio', 'Contact'],
+    routes: ['Home', 'About', 'Portfolio', 'Contact'],
   }),
   methods: {
     navigate(route) {
