@@ -1,10 +1,10 @@
 <template lang="pug">
-  div(id='app')
+  div(id="app")
     v-app
-      nav-bar(class='header')
-      transition(name='fade')
-        router-view(class='content')
-      bottom(class='footer')
+      nav-bar(class="header")
+      transition(name="fade")
+        router-view(class="content")
+      bottom(class="footer")
 </template>
 
 <script>
