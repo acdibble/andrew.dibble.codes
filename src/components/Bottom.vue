@@ -1,9 +1,8 @@
 <template lang="pug">
   v-footer(height="auto")
     v-layout(row wrap justify-center)
-      a(v-for="medium in media" :key="medium.icon" :href="medium.href" target="_blank")
-        v-btn(icon)
-          v-icon(size="24px") {{ medium.icon }}
+      v-btn(v-for="medium in media" :key="medium.icon" :href="medium.href" target="_blank" icon)
+        v-icon(size="24px") {{ medium.icon }}
       v-flex(xs12 py-3 text-xs-center) &copy; {{ new Date().getFullYear() }} —
         strong  Andrew Dibble
 </template>
@@ -33,9 +32,3 @@ export default {
   }),
 };
 </script>
-
-<style scoped>
-a {
-    text-decoration: none !important;
-}
-</style>
