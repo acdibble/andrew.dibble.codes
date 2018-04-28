@@ -37,6 +37,9 @@ export default {
       }, {
         icon: 'fab fa-instagram',
         href: 'https://www.instagram.com/dynkers/',
+      }, {
+        icon: 'fab fa-twitter-square',
+        href: 'https://twitter.com/_andrew_dibble_',
       },
     ],
   }),
