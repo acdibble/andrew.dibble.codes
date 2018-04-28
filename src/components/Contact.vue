@@ -1,22 +1,15 @@
-<template>
-  <div id="card">
-    <v-layout>
-      <v-flex xs12 sm6 offset-sm3>
-        <v-card>
-          <v-card-media :src="require('@/assets/img/portrait.jpg')" height="300px">
-          </v-card-media>
-          <v-card-title primary-title>
-            <div>
-              <h3 class="headline mb-0">Trying to reach me?</h3>
-              <br />
-              <div>Please feel free to contact me via the social media in the footer or at
-                <a :href="'mailto:' + email">{{ email }}</a>.</div>
-            </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
-  </div>
+<template lang="pug">
+  div(id='card')
+    v-layout
+      v-flex(xs12 sm6 offset-sm3)
+        v-card
+          v-card-media(:src="require('@/assets/img/portrait.jpg')" height="300px")
+          v-card-title(primary-title)
+            div
+              h3(class="headline mb-0") Trying to reach me?
+              br
+              div Please feel free to contact me via the social media in the footer or at
+                |  #[a(:href="'mailto:' + email") {{ email }}]
 </template>
 
 <script>
