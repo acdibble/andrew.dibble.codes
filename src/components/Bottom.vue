@@ -1,23 +1,11 @@
-<template>
-  <v-footer height="auto">
-    <v-layout row wrap justify-center>
-      <a
-        v-for="medium in media"
-        :key="medium.icon"
-        :href="medium.href"
-        target="_blank"
-      >
-        <v-btn icon>
-          <v-icon size="24px">
-            {{ medium.icon }}
-          </v-icon>
-        </v-btn>
-      </a>
-      <v-flex xs12 py-3 text-xs-center>
-        &copy; {{ new Date().getFullYear() }} — <strong>Andrew Dibble</strong>
-      </v-flex>
-    </v-layout>
-  </v-footer>
+<template lang="pug">
+  v-footer(height="auto")
+    v-layout(row wrap justify-center)
+      a(v-for="medium in media" :key="medium.icon" :href="medium.href" target="_blank")
+        v-btn(icon)
+          v-icon(size="24px") {{ medium.icon }}
+      v-flex(xs12 py-3 text-xs-center) &copy; {{ new Date().getFullYear() }} —
+        strong  Andrew Dibble
 </template>
 
 <script>
