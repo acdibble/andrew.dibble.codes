@@ -1,17 +1,18 @@
 <template lang="pug">
   div
-    v-layout
-      v-flex(xs12 sm6 offset-sm3)
-        v-card(v-for="app in apps" :key="app.img" class="card")
-          v-card-media(:src="require(`@/assets/img/${app.img}.jpg`)" height="25vw" contain)
-          v-card-title(primary-title)
-            div
-              h3(class="headline mb-0") {{ app.name }}
-              br
-              div {{ app.description }}
-          v-card-actions
-            v-btn(color="primary" :href="app.href" target="_blank" flat) Link
-            v-btn(color="primary" :href="app.source" target="_blank" flat) Source
+    v-container
+      v-layout(wrap)
+        v-flex(v-for="app in apps" :key="app.img" md6)
+          v-card(class="card")
+            v-card-media(:src="require(`@/assets/img/${app.img}.jpg`)" height="25vw" contain)
+            v-card-title(primary-title)
+              div
+                h3(class="headline mb-0") {{ app.name }}
+                br
+                div {{ app.description }}
+            v-card-actions
+              v-btn(color="primary" :href="app.href" target="_blank" flat) Link
+              v-btn(color="primary" :href="app.source" target="_blank" flat) Source
 </template>
 
 <script>
@@ -54,6 +55,6 @@ export default {
 
 <style scoped>
 .card {
-  margin: 5vh;
+  margin: 4vh;
 }
 </style>
