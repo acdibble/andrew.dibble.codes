@@ -1,5 +1,5 @@
 <template lang="pug">
-  div(id='card')
+  div(id="card")
     v-layout
       v-flex(xs12 sm6 offset-sm3)
         v-card
