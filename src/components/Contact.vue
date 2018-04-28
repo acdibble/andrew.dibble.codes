@@ -1,7 +1,7 @@
 <template lang="pug">
   div(id="card")
     v-layout
-      v-flex(xs12 sm6 offset-sm3)
+      v-flex(md6 offset-md3)
         v-card
           v-card-media(:src="require('@/assets/img/portrait.jpg')" height="300px")
           v-card-title(primary-title)
