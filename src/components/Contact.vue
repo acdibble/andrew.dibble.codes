@@ -22,11 +22,9 @@
 <script>
 export default {
   name: 'Contact',
-  data() {
-    return {
-      email: 'me@andrewdibble.com',
-    };
-  },
+  data: () => ({
+    email: 'me@andrewdibble.com',
+  }),
 };
 </script>
 

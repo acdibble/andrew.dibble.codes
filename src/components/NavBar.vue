@@ -20,11 +20,9 @@
 <script>
 export default {
   name: 'NavBar',
-  data() {
-    return {
-      routes: ['Home', 'Portfolio', 'Contact'],
-    };
-  },
+  data: () => ({
+    routes: ['Home', 'Portfolio', 'Contact'],
+  }),
   methods: {
     navigate(route) {
       if (route === 'Home') {

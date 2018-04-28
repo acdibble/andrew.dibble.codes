@@ -7,11 +7,9 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data() {
-    return {
-      msg: 'Hello there.',
-    };
-  },
+  data: () => ({
+    msg: 'Hello there.',
+  }),
 };
 </script>
 
