@@ -2,8 +2,8 @@
   <div>
     <v-layout>
       <v-flex xs12 sm6 offset-sm3>
-        <v-card v-for="app in apps" :key="app" class="card">
-          <v-card-media :src="require(`@/assets/img/${app.img}.jpg`)" height="540" contain>
+        <v-card v-for="app in apps" :key="app.img" class="card">
+          <v-card-media :src="require(`@/assets/img/${app.img}.jpg`)" height="25vw" contain>
           </v-card-media>
           <v-card-title primary-title>
             <div>
@@ -62,6 +62,6 @@ export default {
 
 <style scoped>
 .card {
-  margin: 50px;
+  margin: 5vh;
 }
 </style>
