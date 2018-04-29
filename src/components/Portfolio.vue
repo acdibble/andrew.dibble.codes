@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     v-container
-      v-layout(wrap)
+      v-layout(wrap v-bind="resize")
         v-flex(v-for="app in apps" :key="app.img" md6)
           v-card(class="card")
             v-card-media(:src="require(`@/assets/img/${app.img}.jpg`)" height="25vw" contain)
@@ -50,6 +50,11 @@ export default {
       },
     ],
   }),
+  computed: {
+    resize() {
+      return { column: this.$vuetify.breakpoint.smAndDown };
+    },
+  },
 };
 </script>
 
