@@ -23,6 +23,6 @@ export default {
 
 <style scoped>
 #card {
-  margin: 4vh;
+  margin: 4vw;
 }
 </style>
