@@ -68,7 +68,7 @@ export default {
         description: 'An open forum for helping aspiring coders with their questions and problems',
         source: 'https://github.com/dabraintrust/grnfld',
         showInfo: false,
-        info: 'Some more lorem ipsum or something',
+        info: 'More info coming soon.',
       },
       {
         name: 'uMTV',
@@ -77,7 +77,7 @@ export default {
         description: 'A video player that allows every YouTube video to only be played once',
         source: 'https://github.com/acdibble/mvp',
         showInfo: false,
-        info: 'Some more lorem ipsum or something',
+        info: 'More info coming soon.',
       },
     ],
   }),
