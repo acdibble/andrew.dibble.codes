@@ -1,6 +1,6 @@
 <template lang="pug">
-  div(id="app")
-    v-app
+  div
+    v-app(v-bind="theme")
       nav-bar(class="header")
       transition(name="fade")
         router-view(class="content")
@@ -14,6 +14,11 @@ import Bottom from './components/Bottom';
 export default {
   name: 'App',
   components: { Bottom, NavBar },
+  computed: {
+    theme() {
+      return { dark: this.$store.state.dark };
+    },
+  },
 };
 </script>
 
