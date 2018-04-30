@@ -5,14 +5,15 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data: () => ({
-    msg: 'Hello there.',
-  }),
+  name: 'Main',
+  computed: {
+    msg() {
+      return this.$store.state.dark ? 'General Kenobi.' : 'Hello there.';
+    },
+  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1 {
   font-size: 10vw;
