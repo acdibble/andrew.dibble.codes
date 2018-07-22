@@ -44,6 +44,16 @@ export default {
           giving me the 10,000 foot view.`,
       },
       {
+        name: 'The Daily Article',
+        href: 'https://article-store.herokuapp.com',
+        img: 'article-store',
+        description: 'A store for articles',
+        source: 'https://gitub.com/acdibble/article-store',
+        showInfo: false,
+        info: `A basic CRUD app for articles. The front end uses React, Redux, and Bootstrap. It runs \
+        on a MongoDB storage and uses Node with Express for the server.`
+      },
+      {
         name: 'Waggl',
         href: 'http://www.waggl.dog',
         img: 'waggl',
@@ -69,10 +79,7 @@ export default {
         source: 'https://github.com/dabraintrust/grnfld',
         showInfo: false,
         info: `A Stack Overflow inspired clone for novice coders to post questions and get help and answers \
-        from more knowledgeable coders.
-        <br />
-        <br />
-        It runs on AngularJS on the front end and a backing PostgreSQL database.`,
+        from more knowledgeable coders. It runs on AngularJS on the front end and a backing PostgreSQL database.`,
       },
       {
         name: 'uMTV',
@@ -81,10 +88,8 @@ export default {
         description: 'A video player that allows every YouTube video to only be played once',
         source: 'https://github.com/acdibble/mvp',
         showInfo: false,
-        info: `A playlist maker that only allows YouTube videos to be played that haven't already been played.
-        <br />
-        <br />
-        Uses MongoDB to store videos that have already been played.`,
+        info: `A playlist maker that only allows YouTube videos to be played that haven't already been played. \
+        It uses MongoDB to store videos that have already been played.`,
       },
     ],
   }),
