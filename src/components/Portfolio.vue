@@ -32,16 +32,7 @@ export default {
         description: 'What you\'re looking at right now',
         source: 'https://github.com/acdibble/andrewdibble.com',
         showInfo: false,
-        info: `This is my personal site that I built using the vue-cli. I used Vue.js, vue-router, \
-          Vuetify, and Pug to create the front end. The back end uses a simple Express server that \
-          (as of yet) only serves the static index.html file. It is currently hosted on a Google Cloud \
-          Compute Engine running an Ubuntu 16.04 LTS VM with Nginx and PM2. It may also find itself \
-          from time to time being hosted from my RaspberryPi.
-          <br />
-          <br />
-          A tip of the hat to Shannon and JP, who have served as my third, fourth, fifth, and sixth \
-          eyes on this site for me. Thanks to Charlie as well for having introduced me to Vue and \
-          giving me the 10,000 foot view.`,
+        info: 'This is my personal site that I built using the vue-cli. I used Vue.js, vue-router, Vuetify, and Pug to create the front end. The back end uses a simple Express server that (as of yet) only serves the static index.html file. It is currently hosted on a Google Cloud Compute Engine running an Ubuntu 16.04 LTS VM with Nginx and PM2. It may also find itself from time to time being hosted from my RaspberryPi.',
       },
       {
         name: 'The Daily Article',
@@ -50,8 +41,7 @@ export default {
         description: 'A store for articles',
         source: 'https://gitub.com/acdibble/article-store',
         showInfo: false,
-        info: `A basic CRUD app for articles. The front end uses React, Redux, and Bootstrap. It runs \
-        on a MongoDB storage and uses Node with Express for the server.`
+        info: 'A basic CRUD app for articles. The front end uses React, Redux, and Bootstrap. It runs on a MongoDB storage and uses Node with Express for the server.',
       },
       {
         name: 'Waggl',
@@ -60,16 +50,10 @@ export default {
         description: 'A connection between adoptable shelter dogs and prospective owners',
         source: 'https://github.com/contigoers/waggl',
         showInfo: false,
-        info: `An app conceived and created by four dog-loving software engineers with the dream \
-        of finding an easier way to connect all the shelter dogs to central site so they might get \
-        adopted more quickly. We created it using React and Redux. The styling is courtesy of Ant Design \
-        and SASS. It is running on a Koa server hosted on an Amazon Web Services EC2 instance, with \
-        the data being stored on an AWS Relational Database Service using MySQL.
+        info: `An app conceived and created by four dog-loving software engineers with the dream of finding an easier way to connect all the shelter dogs to central site so they might get adopted more quickly. We created it using React and Redux. The styling is courtesy of Ant Design and SASS. It is running on a Koa server hosted on an Amazon Web Services EC2 instance, with the data being stored on an AWS Relational Database Service using MySQL.
         <br />
         <br />
-        Shout out to my co-engineers on this project: <a href="https://github.com/jpangelle/" target="_blank">\
-        Jean Paul Angelle</a>, <a href="https://github.com/kmehta903/" target="_blank">Krisha Mehta</a>, and \
-        <a href="https://github.com/shannonpearson/" target="_blank">Shannon Pearson</a>.`,
+        Shout out to my co-engineers on this project: <a href="https://github.com/jpangelle/" target="_blank">Jean Paul Angelle</a>, <a href="https://github.com/kmehta903/" target="_blank">Krisha Mehta</a>, and <a href="https://github.com/shannonpearson/" target="_blank">Shannon Pearson</a>.`,
       },
       {
         name: 'grnfld.',
@@ -78,8 +62,7 @@ export default {
         description: 'An open forum for helping aspiring coders with their questions and problems',
         source: 'https://github.com/dabraintrust/grnfld',
         showInfo: false,
-        info: `A Stack Overflow inspired clone for novice coders to post questions and get help and answers \
-        from more knowledgeable coders. It runs on AngularJS on the front end and a backing PostgreSQL database.`,
+        info: 'A Stack Overflow inspired clone for novice coders to post questions and get help and answers from more knowledgeable coders. It runs on AngularJS on the front end and a backing PostgreSQL database.',
       },
       {
         name: 'uMTV',
@@ -88,8 +71,7 @@ export default {
         description: 'A video player that allows every YouTube video to only be played once',
         source: 'https://github.com/acdibble/mvp',
         showInfo: false,
-        info: `A playlist maker that only allows YouTube videos to be played that haven't already been played. \
-        It uses MongoDB to store videos that have already been played.`,
+        info: 'A playlist maker that only allows YouTube videos to be played that haven\'t already been played. It uses MongoDB to store videos that have already been played.',
       },
     ],
   }),
