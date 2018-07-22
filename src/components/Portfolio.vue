@@ -68,7 +68,11 @@ export default {
         description: 'An open forum for helping aspiring coders with their questions and problems',
         source: 'https://github.com/dabraintrust/grnfld',
         showInfo: false,
-        info: 'More info coming soon.',
+        info: `A Stack Overflow inspired clone for novice coders to post questions and get help and answers \
+        from more knowledgeable coders.
+        <br />
+        <br />
+        It runs on AngularJS on the front end and a backing PostgreSQL database.`,
       },
       {
         name: 'uMTV',
@@ -77,7 +81,10 @@ export default {
         description: 'A video player that allows every YouTube video to only be played once',
         source: 'https://github.com/acdibble/mvp',
         showInfo: false,
-        info: 'More info coming soon.',
+        info: `A playlist maker that only allows YouTube videos to be played that haven't already been played.
+        <br />
+        <br />
+        Uses MongoDB to store videos that have already been played.`,
       },
     ],
   }),
