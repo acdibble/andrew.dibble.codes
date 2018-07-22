@@ -39,7 +39,7 @@ export default {
         href: 'https://article-store.herokuapp.com',
         img: 'article-store',
         description: 'A store for articles',
-        source: 'https://gitub.com/acdibble/article-store',
+        source: 'https://github.com/acdibble/article-store',
         showInfo: false,
         info: 'A basic CRUD app for articles. The front end uses React, Redux, and Bootstrap. It runs on a MongoDB storage and uses Node with Express for the server.',
       },
