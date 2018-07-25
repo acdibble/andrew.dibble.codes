@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-toolbar
+  v-toolbar(app)
     v-toolbar-title(@click="handleClick" class="noselect") Welcome
     v-spacer
     v-toolbar-items(class="hidden-sm-and-down")

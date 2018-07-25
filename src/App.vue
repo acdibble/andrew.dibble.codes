@@ -1,10 +1,10 @@
 <template lang="pug">
-  div
-    v-app(v-bind="theme")
-      nav-bar(class="header")
+  v-app(v-bind="theme")
+    nav-bar
+    v-content
       transition(name="fade")
-        router-view(class="content")
-      bottom(class="footer")
+        router-view
+    bottom
 </template>
 
 <script>
@@ -23,22 +23,6 @@ export default {
 </script>
 
 <style>
-body {
-  min-height: 100vh;
-}
-
-.content {
-  grid-area: content;
-}
-
-.header {
-  grid-area: header;
-}
-
-.footer {
-  grid-area: footer;
-}
-
 .fade-enter-active, .fade-leave-active {
   transition-property: opacity;
   transition-duration: .25s;

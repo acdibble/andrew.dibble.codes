@@ -1,5 +1,5 @@
 <template lang="pug">
-  v-footer(height="auto")
+  v-footer(height="auto" app)
     v-layout(row wrap justify-center)
       v-btn(v-for="medium in media" :key="medium.icon" :href="medium.href" target="_blank" icon)
         v-icon(size="24px") {{ medium.icon }}
