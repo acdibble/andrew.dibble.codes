@@ -10,7 +10,6 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
     "heroku-postbuild": "node build/build.js",
-    "flask": "python app.py",
     "gc": "pm2 start server.js -- --production"
   },
   "dependencies": {
