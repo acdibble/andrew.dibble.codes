@@ -24,7 +24,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('dist'));
 
 app.get('/api/apps', (req, res) => {
-  App.find().then(docs => res.json(docs));
+  App.find()
+    .then(docs => res.json(docs.sort(({ _id: a }, { _id: b }) => (a < b ? -1 : 1))));
 });
 
 const port = process.env.PORT || 3000;
