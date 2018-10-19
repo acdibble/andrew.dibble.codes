@@ -1,5 +1,6 @@
 <template lang="pug">
   div
+    v-alert(:value="error" type="error") Sorry! I couldn't fetch the portfolio pieces. :(
     v-container(v-if="!isLoading")
       v-layout(wrap v-bind="resize")
         v-flex(v-for="app in apps" :key="app.img" md6)
@@ -27,22 +28,30 @@ export default {
   name: 'Portfolio',
   data() {
     return {
-      apps: [],
-      isLoading: true,
+      isLoading: !this.$store.getters.apps.length,
+      error: false,
     };
   },
   computed: {
     resize() {
       return { column: this.$vuetify.breakpoint.smAndDown };
     },
+    apps() {
+      return this.$store.getters.apps;
+    },
   },
   created() {
-    fetch('/api/portfolios')
-      .then(res => res.json())
-      .then((apps) => {
-        this.apps = apps;
-        // this.isLoading = false;
-      });
+    if (!this.$store.getters.apps.length) {
+      this.isLoading = true;
+      this.$store.dispatch('getApps')
+        .then(() => {
+          this.isLoading = false;
+        })
+        .catch(() => {
+          this.isLoading = false;
+          this.error = true;
+        });
+    }
   },
 };
 </script>
@@ -50,14 +59,5 @@ export default {
 <style scoped>
 .card {
   margin: 2vw;
-}
-
-.spinner {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%)
 }
 </style>

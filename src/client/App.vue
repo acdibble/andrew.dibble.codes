@@ -8,8 +8,11 @@
 </template>
 
 <script>
+import Promise from 'bluebird';
 import NavBar from './components/NavBar';
 import Bottom from './components/Bottom';
+
+window.Promise = Promise;
 
 export default {
   name: 'App',
@@ -34,5 +37,14 @@ export default {
 
 .fade-enter, .fade-leave-active {
   opacity: 0
+}
+
+.spinner {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }
 </style>
