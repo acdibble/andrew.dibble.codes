@@ -3,7 +3,7 @@
     v-layout
       v-flex(md6 offset-md3)
         v-card
-          v-card-media(:src="require('@/assets/img/portrait.jpg')" height="300px")
+          v-card-media(:src="require('assets/img/portrait.jpg')" height="300px")
           v-card-title(primary-title)
             div
               h3(class="headline mb-0") Trying to reach me?
