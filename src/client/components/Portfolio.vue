@@ -44,12 +44,11 @@ export default {
     if (!this.$store.getters.apps.length) {
       this.isLoading = true;
       this.$store.dispatch('getApps')
-        .then(() => {
-          this.isLoading = false;
-        })
         .catch(() => {
-          this.isLoading = false;
           this.error = true;
+        })
+        .finally(() => {
+          this.isLoading = false;
         });
     }
   },
