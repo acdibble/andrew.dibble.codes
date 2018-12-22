@@ -11,7 +11,7 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
     "heroku-postbuild": "node build/build.js",
-    "gc": "pm2 start server.js -- --production"
+    "gc": "pm2 start src/server -- --production"
   },
   "dependencies": {
     "bluebird": "^3.5.2",
