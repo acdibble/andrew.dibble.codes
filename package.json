@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "server": "sudo node_modules/.bin/nodemon src/server --watch src/server",
+    "server": "node_modules/.bin/nodemon src/server --watch src/server",
     "start": "node src/server",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
@@ -14,7 +14,6 @@
     "gc": "pm2 start src/server -- --production"
   },
   "dependencies": {
-    "bluebird": "^3.5.2",
     "body-parser": "^1.18.2",
     "dotenv": "^5.0.1",
     "express": "^4.16.3",

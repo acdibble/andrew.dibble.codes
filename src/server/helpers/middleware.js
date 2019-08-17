@@ -1,5 +1,7 @@
-const errIfNotConnected = isConnected => (req, res, next) => {
-  if (!isConnected()) {
+const mongoose = require('mongoose');
+
+const errIfNotConnected = (req, res, next) => {
+  if (mongoose.connection.readyState !== 1) {
     res.sendStatus(500);
   } else {
     next();

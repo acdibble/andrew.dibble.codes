@@ -8,11 +8,8 @@
 </template>
 
 <script>
-import Promise from 'bluebird';
 import NavBar from './components/NavBar';
 import Bottom from './components/Bottom';
-
-window.Promise = Promise;
 
 export default {
   name: 'App',
