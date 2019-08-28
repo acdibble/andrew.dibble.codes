@@ -110,6 +110,7 @@ body {
     display: flex;
     height: 100%;
     flex-direction: row;
+    position: static;
   }
 
   #app > header li {
