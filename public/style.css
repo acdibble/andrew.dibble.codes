@@ -25,32 +25,13 @@ body {
   width: 100vw;
   justify-content: space-between;
   background-color: #353835;
-  height: 5vh;
+  min-height: 5vh;
   border-bottom: 5px solid #242423;
   margin-bottom: 10px;
 }
 
 #app > header * {
   color: #F6F7EB;
-}
-
-.active-tab {
-  background-color: #242423;
-}
-
-#app > header li {
-  display: flex;
-  margin-right: 10px;
-  transition: .3s;
-}
-
-#app > header li:hover {
-  background-color: #2D2C2C;
-}
-
-#app > header li:active {
-  background-color: #242423;
-  transition: none;
 }
 
 #app > header a {
@@ -64,20 +45,35 @@ body {
   padding: 10px 20px 10px 20px;
 }
 
+.active-tab {
+  background-color: #242423;
+}
+
+.menu-button {
+  padding: 10px 10px 10px 10px;
+  align-self: center;
+}
+
+.navbar-tabs {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #353835;
+}
+
 .navbar-container {
   display: flex;
-  height: 100%;
-  flex-direction: row;
 }
 
 .navbar-brand {
-  display: flex;
   margin: auto 0 auto 10px;
 }
 
 .page {
   display: flex;
-  width: 960px;
   margin: 0 auto;
   flex: 1;
   flex-direction: column;
@@ -88,6 +84,7 @@ body {
   align-self: center;
   align-items: center;
   flex: 1;
+  font-size: 9vw;
 }
 
 #app > footer {
@@ -97,9 +94,6 @@ body {
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-  .navbar-big {
-    display: none;
-  }
 }
 
 /* Tablet Styles */
@@ -108,7 +102,47 @@ body {
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-  #app > header {
-    height: 5vh;
+  .page {
+    width: 960px;
+  }
+
+  .navbar-tabs {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+  }
+
+  #app > header li {
+    margin-right: 10px;
+    display: flex;
+    transition: .3s;
+  }
+
+  #app > header li:hover {
+    background-color: #2D2C2C;
+  }
+
+  #app > header li:active {
+    background-color: #242423;
+    transition: none;
+  }
+
+  #app > header a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+  }
+
+  .menu-button {
+    display: none
+  }
+
+  .splash {
+    font-size: 10vh;
   }
 }
