@@ -10,7 +10,8 @@
     "start": "node src/server",
     "lint": "eslint --ext .js src",
     "build": "parcel build public/index.html",
-    "heroku-postbuild": "node build/build.js",
+    "clean-build": "rm -rf dist && mkdir dist && cp -r public/assets dist && npm run build",
+    "heroku-postbuild": "npm run clean-build",
     "gc": "pm2 start src/server -- --production"
   },
   "dependencies": {
@@ -29,8 +30,8 @@
     "parcel-bundler": "^1.12.3"
   },
   "engines": {
-    "node": ">= 6.0.0",
-    "npm": ">= 3.0.0"
+    "node": ">= 10.0.0",
+    "npm": ">= 6.0.0"
   },
   "browserslist": [
     "> 1%",
