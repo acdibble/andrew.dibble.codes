@@ -9,7 +9,7 @@
     "server": "node_modules/.bin/nodemon src/server --watch src/server",
     "start": "node src/server",
     "lint": "eslint --ext .js src",
-    "build": "node build/build.js",
+    "build": "parcel build public/index.html",
     "heroku-postbuild": "node build/build.js",
     "gc": "pm2 start src/server -- --production"
   },
