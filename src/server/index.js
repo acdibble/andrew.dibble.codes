@@ -17,7 +17,7 @@ const app = express();
 
 app.use(
   express.json(),
-  express.static('dist'),
+  express.static('public'),
 );
 
 app.get('/api/apps', errIfNotConnected, async (req, res) => {

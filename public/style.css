@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6F7EB;
+}
+
+body > header {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  background-color: #353835;
+  height: 5vh;
+  border-bottom: 5px solid #242423;
+  margin-bottom: 10px;
+}
+
+body > header * {
+  color: #F6F7EB;
+}
+
+body > header li {
+  display: flex;
+  margin-right: 10px;
+  transition: .3s;
+}
+
+body > header li:hover {
+  background-color: #2D2C2C;
+}
+
+body > header li:active {
+  background-color: #242423;
+  transition: none;
+}
+
+body > header a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+}
+
+.navbar-container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+.navbar-brand {
+  display: flex;
+  margin: auto 0 auto 10px;
+}
+
+.page {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.active-tab {
+  background-color: #242423;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  .navbar-big {
+    display: none;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body > header {
+    height: 5vh;
+  }
+}

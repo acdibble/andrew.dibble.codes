@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Main from '@/components/Main';
-import About from '@/components/About';
-import Contact from '@/components/Contact';
-import Portfolio from '@/components/Portfolio';
-import PageNotFound from '@/components/PageNotFound';
+import Main from '../components/Main.vue';
+import About from '../components/About.vue';
+import Contact from '../components/Contact.vue';
+import Portfolio from '../components/Portfolio.vue';
+import PageNotFound from '../components/PageNotFound.vue';
 
 Vue.use(Router);
 

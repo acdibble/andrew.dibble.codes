@@ -11,7 +11,7 @@
       p I live in Austin, TX, but I originally am from the Buffalo, NY area. I moved here to pursue
         |  a career in software engineering, attending an advanced software engineering immersive
         |  program before ultimately landing a job as a software engineer at Malauzai Software,
-        |  Inc., an Austin-based start up which was recently acquired by Finastra.
+        |  Inc., an Austin-based start up which was subsequently acquired by Finastra.
       p At Malauzai, I work behind the scenes as a back-end engineer, ensuring your money gets to
         |  where you want it to be. Otherwise, you'll find me playing games, avoiding the
         |  scorching summer, and attempting to keep up on new techs and learning some old ones.
@@ -38,4 +38,3 @@ p {
   margin-right: 10vw;
 }
 </style>
-
