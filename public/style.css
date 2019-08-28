@@ -4,11 +4,23 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #F6F7EB;
+body, html {
+  height: 100vh;
 }
 
-body > header {
+body {
+  background-color: #F6F7EB;
+  min-height: 100vh;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#app > header {
   display: flex;
   width: 100vw;
   justify-content: space-between;
@@ -18,26 +30,30 @@ body > header {
   margin-bottom: 10px;
 }
 
-body > header * {
+#app > header * {
   color: #F6F7EB;
 }
 
-body > header li {
+.active-tab {
+  background-color: #242423;
+}
+
+#app > header li {
   display: flex;
   margin-right: 10px;
   transition: .3s;
 }
 
-body > header li:hover {
+#app > header li:hover {
   background-color: #2D2C2C;
 }
 
-body > header li:active {
+#app > header li:active {
   background-color: #242423;
   transition: none;
 }
 
-body > header a {
+#app > header a {
   display: flex;
   height: 100%;
   width: 100%;
@@ -60,14 +76,24 @@ body > header a {
 }
 
 .page {
+  display: flex;
   width: 960px;
   margin: 0 auto;
+  flex: 1;
+  flex-direction: column;
 }
 
-.active-tab {
-  background-color: #242423;
+.splash {
+  display: flex;
+  align-self: center;
+  align-items: center;
+  flex: 1;
 }
 
+#app > footer {
+  background-color: #E94F37;
+  height: 50px;
+}
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
@@ -82,7 +108,7 @@ body > header a {
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-  body > header {
+  #app > header {
     height: 5vh;
   }
 }

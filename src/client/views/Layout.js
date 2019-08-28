@@ -1,12 +1,12 @@
 import m from 'mithril';
-import Header from './Header';
+import Navbar from './Navbar';
 
 export default child => ({
   view() {
-    return [
-      m(Header),
+    return m('div', { id: 'app' }, [
+      m(Navbar),
       m('div', { class: 'page' }, m(child)),
       m('footer'),
-    ];
+    ]);
   },
 });
