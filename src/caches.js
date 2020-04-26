@@ -29,8 +29,8 @@ export const getTile = async (category, name) => {
     const tile = await wrappedFetch(url, 'text');
     // const indexOfCodeBlock = tile.indexOf('```');
     tiles[key] = tile.slice(tile.indexOf('\n') + 1)
-      .replace(/```\w+(.+?)```/gs, (_, m) => `<pre><code>${m}</code></pre>`)
-      .replace(/`(.+?)`/g, (_, m) => `<pre style="display: inline;"><strong>${m}</strong></pre>`)
+      .replace(/```\w+(.+?)```/gs, (_, m) => `<pre style="background-color: lightgray;"><code>${m}</code></pre>`)
+      .replace(/`(.+?)`/g, (_, m) => `<pre style="display: inline; background-color: lightgray;"><strong>${m}</strong></pre>`)
       .replace(/\[([^\]]+?)\]\((.+?)\)/g, (_, m1, m2) => (/\.md$/.test(m2)
         ? m1
         : `<a href=${m2} target="_blank">${m1}</a>`))
