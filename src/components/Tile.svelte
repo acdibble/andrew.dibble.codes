@@ -1,4 +1,6 @@
 <script>
+  import { slide } from "svelte/transition";
+  import { quintOut } from "svelte/easing";
   import { getTile } from "../caches";
   export let category;
   export let title;
@@ -93,21 +95,25 @@
     </a>
   </div>
   {#if showTile}
-    <section>
-      {#await contents}
+    {#await contents}
+      <section>
         <p class="loading">Loading...</p>
-      {:then til}
+      </section>
+    {:then til}
+      <section transition:slide={{ duration: 500 }}>
         <p>
-          {@html til.tile}
+          {@html til.content}
         </p>
-        {#if til.url}
-          <div class="read-more">
-            <a class="fill-button" href={til.url} target="_blank">Read more</a>
-          </div>
-        {/if}
-      {:catch}
-        Couldn't load :(
-      {/await}
-    </section>
+        <div class="read-more">
+          <a class="fill-button" href={til.url} target="_blank">
+            Read on Github
+          </a>
+        </div>
+      </section>
+    {:catch}
+      <section>
+        <p>Couldn't load :(</p>
+      </section>
+    {/await}
   {/if}
 </article>

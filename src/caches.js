@@ -27,14 +27,15 @@ export const getTile = async (category, name) => {
   if (!tiles[key]) {
     const url = buildUrl(key);
     const tile = await wrappedFetch(url, 'text');
-    const indexOfCodeBlock = tile.indexOf('```');
-    console.log(tile);
-    tiles[key] = tile.slice(tile.indexOf('\n'), indexOfCodeBlock)
+    // const indexOfCodeBlock = tile.indexOf('```');
+    tiles[key] = tile.slice(tile.indexOf('\n') + 1)
+      .replace(/```\w+(.+?)```/gs, (_, m) => `<pre><code>${m}</code></pre>`)
       .replace(/`(.+?)`/g, (_, m) => `<pre style="display: inline;"><strong>${m}</strong></pre>`)
-      .replace(/\[(.+?)\]\((.+?)\)/g, (_, m1, m2) => (/\.md$/.test(m2)
+      .replace(/\[([^\]]+?)\]\((.+?)\)/g, (_, m1, m2) => (/\.md$/.test(m2)
         ? m1
-        : `<a href=${m2} target="_blank">${m1}</a>`)).trim();
+        : `<a href=${m2} target="_blank">${m1}</a>`))
+      .replace(/\[\d\]/g, (m) => `\n${m}`).trim()
   }
 
-  return { tile: tiles[key], url: `https://github.com/acdibble/til/blob/master/${key}` };
+  return { content: tiles[key], url: `https://github.com/acdibble/til/blob/master/${key}` };
 }
