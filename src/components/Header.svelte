@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     background-color: #222222;
     align-items: stretch;
+    flex-direction: row;
   }
 
   ul {
