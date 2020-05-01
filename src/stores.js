@@ -17,4 +17,4 @@ export const structure = readable(null, (set) => {
   return () => {};
 });
 
-export const section = writable('TIL');
+export const section = writable('About');

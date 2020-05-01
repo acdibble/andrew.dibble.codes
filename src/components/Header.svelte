@@ -50,6 +50,14 @@
     header {
       align-items: center;
     }
+
+    div.nice-padding {
+      padding-left: 0;
+    }
+
+    li:last-child a.nice-padding {
+      padding-right: 0;
+    }
   }
 </style>
 

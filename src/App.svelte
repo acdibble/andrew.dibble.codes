@@ -1,4 +1,5 @@
 <script>
+  import About from "./components/About.svelte";
   import Header from "./components/Header.svelte";
   import TileList from "./components/TileList.svelte";
   import { section } from "./stores";
@@ -20,7 +21,7 @@
     }
 
     main div {
-      padding: 2vh 0;
+      margin: 2vh 0;
       width: 860px;
     }
   }
@@ -30,7 +31,7 @@
 <main>
   <div>
     {#if $section === 'About'}
-      <div>Howdy</div>
+      <About />
     {:else if $section === 'TIL'}
       <TileList />
     {/if}
