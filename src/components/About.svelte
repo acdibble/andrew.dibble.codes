@@ -19,6 +19,9 @@
 
   a {
     text-decoration: none;
+  }
+
+  li a {
     color: black;
   }
 
@@ -63,8 +66,7 @@
       Feel free to brows the "TIL" section to see a collection of small things
       I've learnt over the past period of time. They've been custom-processed to
       display on this page and are best viewed on
-      <a href="https://www.github.com/acdibble/til" target="_blank">Github</a>
-      .
+      <a href="https://www.github.com/acdibble/til" target="_blank">Github</a>.
     </p>
   </article>
 
