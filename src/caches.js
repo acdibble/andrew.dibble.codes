@@ -23,11 +23,10 @@ const tiles = {};
 const buildUrl = (key) => `https://raw.githubusercontent.com/acdibble/til/master/${key}`;
 
 export const getTile = async (category, name) => {
-  const key = `${category}/${name.replace(/`/g, '').replace(/ /g, '-')}.md`.toLowerCase();
+  const key = `${category.replace(/ /g, '-')}/${name.replace(/`/g, '').replace(/ /g, '-')}.md`.toLowerCase();
   if (!tiles[key]) {
     const url = buildUrl(key);
     const tile = await wrappedFetch(url, 'text');
-    // const indexOfCodeBlock = tile.indexOf('```');
     tiles[key] = tile.slice(tile.indexOf('\n') + 1)
       .replace(/```\w+(.+?)```/gs, (_, m) => `<pre style="background-color: lightgray;"><code>${m}</code></pre>`)
       .replace(/`(.+?)`/g, (_, m) => `<pre style="display: inline; background-color: lightgray;"><strong>${m}</strong></pre>`)

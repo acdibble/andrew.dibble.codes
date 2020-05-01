@@ -7,18 +7,32 @@
 </script>
 
 <style>
-  main {
-    align-self: center;
-    padding: 2vh 5vw;
+  main div {
+    margin: 2vh 5vw;
     max-width: 860px;
+  }
+
+  @media (min-width: 860px) {
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    main div {
+      padding: 2vh 0;
+      width: 860px;
+    }
   }
 </style>
 
 <Header {pages} />
 <main>
-  {#if $section === 'About'}
-    <div>Howdy</div>
-  {:else if $section === 'TIL'}
-    <TileList />
-  {/if}
+  <div>
+    {#if $section === 'About'}
+      <div>Howdy</div>
+    {:else if $section === 'TIL'}
+      <TileList />
+    {/if}
+  </div>
 </main>

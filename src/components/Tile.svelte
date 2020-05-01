@@ -9,9 +9,11 @@
   let contents;
 
   const formatTitle = string => {
-    const match = string.match(/`(?<code>\w+)`(?<rest>.*)/);
-    if (!match) return string;
-    return `<pre style="display: inline; margin: 0;">${match.groups.code}</pre>&nbsp;${match.groups.rest}`;
+    const formatted = string.replace(
+      /`(.+?)`/g,
+      (_, m) => `<pre style="display: inline; margin: 0 5px 0;">${m}</pre> `
+    );
+    return formatted;
   };
 </script>
 

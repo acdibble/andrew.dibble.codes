@@ -10,12 +10,17 @@
   }
 
   header {
-    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: #222222;
+  }
+
+  .container {
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #222222;
-    align-items: stretch;
     flex-direction: row;
+    max-width: 860px;
   }
 
   ul {
@@ -33,24 +38,37 @@
   }
 
   .nice-padding {
-    padding: 2vh 4vw;
+    padding: 2vh 25px;
+  }
+
+  @media (min-width: 860px) {
+    .container {
+      margin: 0 4vw;
+      min-width: 860px;
+    }
+
+    header {
+      align-items: center;
+    }
   }
 </style>
 
 <header>
-  <div class="nice-padding">Welcome!</div>
-  <nav>
-    <ul>
-      {#each pages as page}
-        <li>
-          <a
-            class="nice-padding"
-            href="javascript:void 0"
-            on:click={() => section.set(page)}>
-            {page}
-          </a>
-        </li>
-      {/each}
-    </ul>
-  </nav>
+  <div class="container">
+    <div class="nice-padding">Welcome!</div>
+    <nav>
+      <ul>
+        {#each pages as page}
+          <li>
+            <a
+              class="nice-padding"
+              href="javascript:void 0"
+              on:click={() => section.set(page)}>
+              {page}
+            </a>
+          </li>
+        {/each}
+      </ul>
+    </nav>
+  </div>
 </header>

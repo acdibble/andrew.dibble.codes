@@ -10,7 +10,7 @@
     margin-top: 0;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 860px) {
     .mobile-warning {
       display: none;
     }
