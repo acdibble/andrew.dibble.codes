@@ -1,0 +1,41 @@
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.article {
+  margin: 0 2vw;
+}
+
+.a {
+  text-decoration: none;
+}
+
+.listLink {
+  color: black;
+}
+
+.h1 {
+  margin: 0;
+}
+
+.p {
+  margin: 1vh 1vw;
+}
+
+.li {
+  display: inline-block;
+  white-space: nowrap;
+  list-style-type: none;
+  flex: 1;
+  margin: 1vh 2vw;
+}
+
+.ul {
+  display: flex;
+  justify-content: center;
+  margin: 1vh 10vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+}
