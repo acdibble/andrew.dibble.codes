@@ -8,7 +8,7 @@ export const getTils = async (): Promise<Record<string, string[]>> => {
 
 export const formatPath = (category: string, name: string): string =>
   `/tils/${category}/${name
-    .replace(/`/g, '')
+    .replace(/[`.]/g, '')
     .replace(/ /g, '-')}`.toLowerCase();
 
 export const getTilsPaths = async () => {
