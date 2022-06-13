@@ -1,7 +1,7 @@
 import classNames from '../utils/classNames';
 
 const Title = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="px-3 text-xl font-semibold underline">{children}</h2>
+  <h2 className="max-w-fit px-3 text-xl font-semibold">{children}</h2>
 );
 
 const Body = ({ children }: { children: React.ReactNode }) => (

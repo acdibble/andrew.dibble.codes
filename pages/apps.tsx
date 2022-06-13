@@ -31,7 +31,7 @@ export default function Apps() {
                   href={url}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center space-x-1"
+                  className="flex items-center space-x-1 hover:underline"
                 >
                   <span>{title}</span>
                   <svg
