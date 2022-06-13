@@ -22,7 +22,7 @@ export default function Apps() {
   return (
     <div className="flex w-full flex-col space-y-4 p-4">
       <p className="text-sm">A list of apps I have created for fun.</p>
-      <div className="flex w-full flex-col space-y-4 md:px-10">
+      <div className="flex w-full flex-col space-y-4">
         {apps.map(({ url, title, body, image }) => (
           <div className="flex w-full flex-col" key={title}>
             <Card image={<Image {...image} />}>
