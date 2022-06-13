@@ -12,7 +12,7 @@ function NavLink({ path, as = 'div', children }: NavLinkProps) {
     as,
     {
       className:
-        'flex h-full w-24 transition hover:bg-stone-700 active:bg-stone-600',
+        'flex h-full w-24 flex-1 transition hover:bg-stone-700 active:bg-stone-600',
     },
     <Link href={path}>
       {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
@@ -31,11 +31,11 @@ export default function Nav(): JSX.Element {
           <NavLink path="/">Welcome!</NavLink>
         </div>
         <ul className="flex space-x-2">
-          <NavLink as="li" path="/">
-            About
-          </NavLink>
           <NavLink as="li" path="/tils">
             TIL
+          </NavLink>
+          <NavLink as="li" path="/apps">
+            Apps
           </NavLink>
         </ul>
       </div>
