@@ -35,9 +35,9 @@ export default function Apps() {
   return (
     <div className="flex w-full flex-col space-y-4 p-4">
       <p className="text-sm">A list of apps I have created for fun.</p>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         {apps.map(({ url, title, body, image }) => (
-          <Card image={<Image {...image} />} key={title}>
+          <Card key={title}>
             <Card.Title>
               <a
                 href={url}
@@ -63,6 +63,7 @@ export default function Apps() {
               </a>
             </Card.Title>
             <Card.Body>{body}</Card.Body>
+            <Card.Image href={url} {...image} />
           </Card>
         ))}
       </div>

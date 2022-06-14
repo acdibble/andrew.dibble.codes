@@ -1,3 +1,5 @@
+import NextImage, { ImageProps } from 'next/image';
+import React, { Fragment } from 'react';
 import classNames from '../utils/classNames';
 
 const Title = ({
@@ -13,27 +15,28 @@ const Title = ({
 );
 
 const Body = ({ children }: { children: React.ReactNode }) => (
-  <div className="px-3 pb-3">{children}</div>
+  <div className="flex-1 px-3 pb-3">{children}</div>
 );
 
-const Card = ({
-  children,
-  image,
-}: {
-  children: React.ReactNode;
-  image?: JSX.Element;
-}) => (
-  <article
-    className={classNames(
-      'flex w-full flex-col space-y-2 overflow-clip rounded-md border-[1px] bg-stone-200 pt-2 shadow-sm',
-    )}
-  >
-    <div className="flex-1">{children}</div>
-    {image}
+const Image = ({
+  href,
+  ...imageProps
+}: Omit<ImageProps, 'children'> & { href?: string }) => {
+  const image = <NextImage {...imageProps} />;
+  const [wrapper, props] = (
+    href ? ['a', { href, className: 'flex' }] : [Fragment, {}]
+  ) as Parameters<typeof React['createElement']>;
+  return React.createElement(wrapper, props, image);
+};
+
+const Card = ({ children }: { children: React.ReactNode }) => (
+  <article className="flex w-full flex-col space-y-2 overflow-clip rounded-md border-[1px] bg-stone-200 pt-2 shadow-sm">
+    {children}
   </article>
 );
 
-Card.Body = Body;
 Card.Title = Title;
+Card.Body = Body;
+Card.Image = Image;
 
 export default Card;
