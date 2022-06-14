@@ -50,7 +50,10 @@ const Home: NextPage = () => {
       <h2 className="text-xl font-semibold">Contact</h2>
       <p>
         I can be reached at{' '}
-        <a href="mailto:andrew@dibble.codes" className="underline">
+        <a
+          href="mailto:andrew@dibble.codes"
+          className="underline hover:text-stone-500"
+        >
           andrew@dibble.codes
         </a>{' '}
         or at any of the following social media:
@@ -62,7 +65,7 @@ const Home: NextPage = () => {
               key={name}
               type="button"
               onClick={() => window.open(href, '_blank')}
-              className="flex items-center justify-center space-x-2 rounded-md p-1 transition hover:bg-gray-300"
+              className="flex items-center justify-center space-x-2 rounded-md px-2 py-1 transition hover:bg-stone-100"
             >
               {logo}
               <span>{name}</span>
