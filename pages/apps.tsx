@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Card from '../components/Card';
 import Wordle from '../public/wordle.jpg';
 import Sudoku from '../public/sudoku.png';
@@ -10,7 +9,7 @@ const apps = [
     body: (
       <p className="text-md">
         A Sudoku solver written in Rust, compiled down to WebAssembly, and
-        shipped right to your browser for a lighning-fast Sudoku solving
+        shipped right to your browser for a lightning-fast Sudoku solving
         experience.
       </p>
     ),
