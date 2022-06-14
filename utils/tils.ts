@@ -6,10 +6,11 @@ export const getTils = async (): Promise<Record<string, string[]>> => {
   return response.json();
 };
 
+const escape = (string: string): string =>
+  string.replace(/[`.]/g, '').replace(/ /g, '-');
+
 export const formatPath = (category: string, name: string): string =>
-  `/tils/${category}/${name
-    .replace(/[`.]/g, '')
-    .replace(/ /g, '-')}`.toLowerCase();
+  `/tils/${escape(category)}/${escape(name)}`.toLowerCase();
 
 export const getTilsPaths = async () => {
   const tilsObject = await getTils();
