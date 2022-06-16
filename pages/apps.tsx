@@ -63,7 +63,7 @@ export default function Apps() {
             <Card.Body>{body}</Card.Body>
             <Card.Image href={url} {...image} />
             <a
-              className="!mt-0 flex w-full items-center justify-center space-x-1 py-[2px] text-sm hover:bg-stone-300"
+              className="!mt-0 flex w-full items-center justify-center space-x-1 py-[2px] text-sm transition hover:bg-stone-300"
               href={`https://github.com/acdibble/${repo}`}
             >
               <span>Source</span>
