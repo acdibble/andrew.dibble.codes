@@ -1,22 +1,26 @@
 import Card from '../components/Card';
 import Wordle from '../public/wordle.jpg';
 import Sudoku from '../public/sudoku.png';
+import ExternalLink from '../components/svgs/ExternalLink';
 
 const apps = [
   {
     url: 'https://sudoku.dibble.codes',
+    repo: 'https://github.com/acdibble/solid-sudoku',
     title: 'Sudoku Solver',
     body: (
       <p className="text-md">
         A Sudoku solver written in Rust, compiled down to WebAssembly, and
         shipped right to your browser for a lightning-fast Sudoku solving
-        experience.
+        experience. Or if it&apos;s not lightning fast, it runs in a webworker
+        and won&apos;t slow you down... 🐢
       </p>
     ),
     image: Sudoku,
   },
   {
     url: 'https://wordle.dibble.codes',
+    repo: 'https://github.com/acdibble/wordle',
     title: 'Wordle Helper',
     body: (
       <>
@@ -35,7 +39,7 @@ export default function Apps() {
     <div className="flex w-full flex-col space-y-4 p-4">
       <p className="text-sm">A list of apps I have created for fun.</p>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-        {apps.map(({ url, title, body, image }) => (
+        {apps.map(({ url, title, body, image, repo }) => (
           <Card key={title}>
             <Card.Title>
               <a
@@ -45,24 +49,18 @@ export default function Apps() {
                 className="flex items-center space-x-1 hover:underline"
               >
                 <span>{title}</span>
-                <svg
-                  className="h-5 w-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
+                <ExternalLink className="h-5 w-5" />
               </a>
             </Card.Title>
             <Card.Body>{body}</Card.Body>
             <Card.Image href={url} {...image} />
+            <a
+              className="!mt-0 flex w-full items-center justify-center space-x-1 py-[2px] text-sm hover:bg-stone-300"
+              href={repo}
+            >
+              <span>Source</span>
+              <ExternalLink className="h-3 w-3" />
+            </a>
           </Card>
         ))}
       </div>
