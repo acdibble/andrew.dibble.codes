@@ -1,15 +1,16 @@
 import Card from '../components/Card';
-import Wordle from '../public/wordle.jpg';
+import Site from '../public/andrew-dibble-codes.png';
+import Wordle from '../public/wordle.png';
 import Sudoku from '../public/sudoku.png';
 import ExternalLink from '../components/svgs/ExternalLink';
 
 const apps = [
   {
     url: 'https://sudoku.dibble.codes',
-    repo: 'https://github.com/acdibble/solid-sudoku',
+    repo: 'solid-sudoku',
     title: 'Sudoku Solver',
     body: (
-      <p className="text-md">
+      <p>
         A Sudoku solver written in Rust, compiled down to WebAssembly, and
         shipped right to your browser for a lightning-fast Sudoku solving
         experience. Or if it&apos;s not lightning fast, it runs in a webworker
@@ -20,17 +21,24 @@ const apps = [
   },
   {
     url: 'https://wordle.dibble.codes',
-    repo: 'https://github.com/acdibble/wordle',
+    repo: 'wordle',
     title: 'Wordle Helper',
     body: (
       <>
-        <p className="text-md">A tool to help you solve Wordle.</p>
+        <p>A tool to help you solve Wordle.</p>
         <p className="text-xs">
           Disclaimer: it has not been proven to be 100% successful.
         </p>
       </>
     ),
     image: Wordle,
+  },
+  {
+    url: 'https://andrew.dibble.codes',
+    repo: 'andrew.dibble.codes',
+    title: 'andrew.dibble.codes',
+    body: <p>You&apos;re looking at it.</p>,
+    image: Site,
   },
 ];
 
@@ -56,7 +64,7 @@ export default function Apps() {
             <Card.Image href={url} {...image} />
             <a
               className="!mt-0 flex w-full items-center justify-center space-x-1 py-[2px] text-sm hover:bg-stone-300"
-              href={repo}
+              href={`https://github.com/acdibble/${repo}`}
             >
               <span>Source</span>
               <ExternalLink className="h-3 w-3" />
