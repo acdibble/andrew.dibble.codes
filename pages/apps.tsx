@@ -21,7 +21,7 @@ const apps = [
   },
   {
     url: 'https://wordle.dibble.codes',
-    repo: 'wordle',
+    repo: 'wordle-helper',
     title: 'Wordle Helper',
     body: (
       <>
