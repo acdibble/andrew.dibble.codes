@@ -1,7 +1,8 @@
 import Card from '../components/Card';
 import Site from '../public/andrew-dibble-codes.png';
-import Wordle from '../public/wordle.png';
+import Snake from '../public/snake.png';
 import Sudoku from '../public/sudoku.png';
+import Wordle from '../public/wordle.png';
 import ExternalLink from '../components/svgs/ExternalLink';
 
 const apps = [
@@ -32,6 +33,13 @@ const apps = [
       </>
     ),
     image: Wordle,
+  },
+  {
+    url: 'https://snake.dibble.codes',
+    repo: 'snake',
+    title: 'Snake',
+    body: <p>Like Snake but probably worse.</p>,
+    image: Snake,
   },
   {
     url: 'https://andrew.dibble.codes',
