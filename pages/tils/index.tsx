@@ -59,4 +59,5 @@ export default function Tils({ tils }: TilsProps): JSX.Element {
 
 export const getStaticProps: GetStaticProps<TilsProps> = async () => ({
   props: { tils: await getTils() },
+  revalidate: 60,
 });
