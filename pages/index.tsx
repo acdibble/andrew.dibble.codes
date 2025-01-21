@@ -3,7 +3,7 @@ import Image from 'next/image';
 import GithubLogo from '../public/github.svg';
 import LinkedinLogo from '../public/linkedin.svg';
 import RedditLogo from '../public/reddit.svg';
-import TwitterLogo from '../public/twitter.svg';
+import BlueSkyLogo from '../public/bluesky.svg';
 
 type SVGProps = { src: string; height: number; width: number };
 
@@ -24,9 +24,9 @@ const Home: NextPage = () => {
       href: 'https://www.linkedin.com/in/andrewdibble/',
     },
     {
-      name: 'Twitter',
-      logo: <NextSVG {...TwitterLogo} />,
-      href: 'https://twitter.com/_andrew_dibble_',
+      name: 'Bluesky',
+      logo: <NextSVG {...BlueSkyLogo} />,
+      href: 'https://bsky.app/profile/dibble.codes',
     },
     {
       name: 'Reddit',
